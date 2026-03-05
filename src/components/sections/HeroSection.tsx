@@ -10,7 +10,7 @@ export function HeroSection() {
     offset: ["start start", "end start"],
   });
 
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "24%"]);
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 70]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.15]);
 
@@ -21,15 +21,12 @@ export function HeroSection() {
       className="relative min-h-screen overflow-hidden"
       aria-label="Hero"
     >
-      <motion.div
-        style={{ y: bgY }}
-        className="absolute inset-0"
-      >
+      <motion.div style={{ y: bgY }} className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(30,30,30,0.72), rgba(30,30,30,0.35)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2200&q=80')",
+              "linear-gradient(to right, rgba(30,30,30,0.72), rgba(30,30,30,0.35)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2400&q=80')",
           }}
         />
       </motion.div>
@@ -41,12 +38,13 @@ export function HeroSection() {
           <p className="font-heading text-2xl">Martino&apos;s</p>
           <nav className="hidden items-center gap-6 text-xs uppercase tracking-[0.2em] md:flex">
             <a href="#about" className="text-soft-beige/85 transition hover:text-accent-gold">About</a>
+            <a href="#chef" className="text-soft-beige/85 transition hover:text-accent-gold">Chef</a>
             <a href="#menu" className="text-soft-beige/85 transition hover:text-accent-gold">Menu</a>
-            <a href="#gallery" className="text-soft-beige/85 transition hover:text-accent-gold">Gallery</a>
-            <a href="#contact" className="text-soft-beige/85 transition hover:text-accent-gold">Contact</a>
+            <a href="#private-dining" className="text-soft-beige/85 transition hover:text-accent-gold">Private Dining</a>
+            <a href="#booking" className="text-soft-beige/85 transition hover:text-accent-gold">Booking</a>
           </nav>
           <a
-            href="#contact"
+            href="#booking"
             className="rounded-full border border-accent-gold px-4 py-2 text-xs uppercase tracking-[0.14em] text-accent-gold transition hover:bg-accent-gold hover:text-charcoal"
           >
             Reserve
@@ -58,21 +56,21 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           style={{ y: contentY, opacity: contentOpacity }}
-          className="mt-auto max-w-3xl pb-16 text-soft-beige"
+          className="mt-auto max-w-4xl pb-16 text-soft-beige"
         >
           <p className="mb-4 text-xs uppercase tracking-[0.25em] text-accent-gold">
             Luxury Italian Dining • Mayfair London
           </p>
-          <h1 className="font-heading text-balance text-5xl leading-tight md:text-7xl">
-            Elevated Italian Dining for Exceptional Evenings
+          <h1 className="font-heading text-balance text-6xl leading-tight md:text-8xl">
+            Cinematic Italian Dining Crafted for London&apos;s Most Memorable Nights
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-soft-beige/90 md:text-lg">
-            Martino&apos;s brings together artisanal ingredients, elegant plating,
-            and attentive hospitality in a setting designed for memorable nights.
+            A luxury dining destination where storytelling, taste, and service
+            precision converge.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <a
-              href="#contact"
+              href="#booking"
               className="rounded-full bg-accent-gold px-7 py-3 text-sm font-semibold tracking-wide text-charcoal transition hover:-translate-y-0.5 hover:opacity-90"
             >
               Reserve Table

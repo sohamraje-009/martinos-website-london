@@ -10,6 +10,10 @@ export const siteConfig = {
   address: "14 Mayfair Lane, London W1K 6JP",
   openingHours: "Mon - Sun: 12:00 PM - 11:00 PM",
   googleMapsUrl: "https://maps.app.goo.gl/jcXLRyRgEZNjgzXa9",
+  openTableUrl:
+    "https://www.opentable.co.uk/s/?covers=2&dateTime=2026-03-06T19%3A00&metroId=72&term=Mayfair",
+  resyUrl:
+    "https://resy.com/cities/ldn?date=2026-03-06&seats=2&query=Mayfair",
   geo: {
     latitude: 51.509865,
     longitude: -0.118092,
