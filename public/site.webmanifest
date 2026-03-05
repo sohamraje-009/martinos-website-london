@@ -1,0 +1,16 @@
+{
+  "name": "Martino's London",
+  "short_name": "Martino's",
+  "description": "Luxury Italian dining in Mayfair, London",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F2EC",
+  "theme_color": "#1E1E1E",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

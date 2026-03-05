@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --charcoal: #1e1e1e;
+  --soft-beige: #f5f2ec;
+  --accent-gold: #c9a86a;
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-playfair);
+}
+
+@theme inline {
+  --color-charcoal: var(--charcoal);
+  --color-soft-beige: var(--soft-beige);
+  --color-accent-gold: var(--accent-gold);
+  --font-sans: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--soft-beige);
+  color: var(--charcoal);
+  font-family: var(--font-body), sans-serif;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(201, 168, 106, 0.08), transparent 35%),
+    radial-gradient(circle at 90% 90%, rgba(30, 30, 30, 0.08), transparent 35%);
+}
+
+.font-heading {
+  font-family: var(--font-heading), serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--accent-gold);
+  color: var(--charcoal);
+}
