@@ -5,13 +5,14 @@ import { SectionHeading } from "../ui/SectionHeading";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-charcoal py-24 text-soft-beige md:py-28">
+    <section id="contact" className="bg-charcoal py-28 text-soft-beige md:py-36">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2">
         <Reveal>
           <SectionHeading
             eyebrow="Reserve"
             title="Book Your Table"
             subtitle="Share your preferred date and details. Our team confirms all bookings personally to ensure an exceptional experience."
+            tone="light"
           />
 
           <div className="mt-7 space-y-4 text-sm leading-relaxed text-soft-beige/85">
@@ -20,13 +21,13 @@ export function ContactSection() {
             </p>
             <p>
               <span className="text-accent-gold">Phone:</span>{" "}
-              <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-accent-gold">
+              <a href={`tel:${siteConfig.phoneHref}`} className="transition hover:text-accent-gold">
                 {siteConfig.phoneDisplay}
               </a>
             </p>
             <p>
               <span className="text-accent-gold">Email:</span>{" "}
-              <a href={`mailto:${siteConfig.email}`} className="hover:text-accent-gold">
+              <a href={`mailto:${siteConfig.email}`} className="transition hover:text-accent-gold">
                 {siteConfig.email}
               </a>
             </p>

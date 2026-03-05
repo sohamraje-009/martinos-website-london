@@ -4,7 +4,7 @@ import { SectionHeading } from "../ui/SectionHeading";
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="bg-white py-24 md:py-28">
+    <section id="testimonials" className="bg-white py-28 md:py-36">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
           <SectionHeading
@@ -17,7 +17,7 @@ export function TestimonialsSection() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {testimonials.map((review, index) => (
             <Reveal key={review.name} delay={index * 0.07}>
-              <article className="rounded-2xl border border-charcoal/10 bg-soft-beige p-6 shadow-sm">
+              <article className="group rounded-2xl border border-charcoal/10 bg-soft-beige p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <p className="text-accent-gold">{"★".repeat(review.rating)}</p>
                 <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
                   &ldquo;{review.quote}&rdquo;

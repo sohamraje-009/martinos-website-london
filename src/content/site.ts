@@ -16,8 +16,18 @@ export const siteConfig = {
   },
 };
 
+export const menuCategories = [
+  "All",
+  "Antipasti",
+  "Pasta",
+  "Main",
+  "Dessert",
+  "Cocktails",
+] as const;
+
 export const menuItems = [
   {
+    category: "Pasta",
     title: "Truffle Tagliatelle",
     description:
       "Fresh egg pasta, black truffle butter, 36-month parmesan, and lemon zest.",
@@ -26,6 +36,7 @@ export const menuItems = [
       "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=1200&q=80",
   },
   {
+    category: "Main",
     title: "Seared Branzino",
     description:
       "Line-caught sea bass, charred fennel, Amalfi citrus, saffron emulsion.",
@@ -34,6 +45,7 @@ export const menuItems = [
       "https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=1200&q=80",
   },
   {
+    category: "Main",
     title: "Tuscan Ribeye",
     description:
       "Dry-aged ribeye, rosemary jus, confit garlic potatoes, grilled broccolini.",
@@ -42,12 +54,49 @@ export const menuItems = [
       "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
   },
   {
+    category: "Dessert",
     title: "Hazelnut Tiramisu",
     description:
       "Espresso mascarpone layers with roasted Piedmont hazelnuts and cacao.",
     price: "£14",
     image:
       "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    category: "Antipasti",
+    title: "Burrata Imperiale",
+    description:
+      "Puglian burrata, heritage tomato confit, basil oil, toasted sourdough.",
+    price: "£18",
+    image:
+      "https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    category: "Pasta",
+    title: "Lobster Ravioli",
+    description:
+      "Handmade ravioli filled with lobster, shellfish bisque, and tarragon butter.",
+    price: "£36",
+    image:
+      "https://images.unsplash.com/photo-1645112411341-6c4fd023882a?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    category: "Cocktails",
+    title: "Mayfair Negroni",
+    description:
+      "Small-batch gin, barrel-aged vermouth, bitter orange, and rosemary smoke.",
+    price: "£16",
+    image:
+      "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    category: "Dessert",
+    title: "Pistachio Panna Cotta",
+    description:
+      "Silken panna cotta, Sicilian pistachio praline, preserved citrus.",
+    price: "£13",
+    image:
+      "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 

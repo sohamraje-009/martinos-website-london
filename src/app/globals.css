@@ -33,8 +33,18 @@ body {
   font-family: var(--font-heading), serif;
 }
 
+.section-padding {
+  padding-top: clamp(5rem, 8vw, 9rem);
+  padding-bottom: clamp(5rem, 8vw, 9rem);
+}
+
 .text-balance {
   text-wrap: balance;
+}
+
+a,
+button {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 ::selection {

@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useState } from "react";
 
 type FormState = {
   name: string;
@@ -24,14 +24,15 @@ const initialState: FormState = {
   website: "",
 };
 
+const inputClass =
+  "mt-2 w-full rounded-xl border border-soft-beige/25 bg-charcoal/70 px-3 py-2 text-sm outline-none ring-accent-gold transition duration-300 hover:border-accent-gold/60 focus:ring";
+
 export function ReservationForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle",
   );
   const [message, setMessage] = useState("");
-
-  const minDate = useMemo(() => new Date().toISOString().slice(0, 10), []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -69,7 +70,7 @@ export function ReservationForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-3xl border border-soft-beige/20 bg-soft-beige/5 p-5 md:p-6"
+      className="rounded-3xl border border-soft-beige/20 bg-soft-beige/5 p-5 shadow-xl shadow-black/10 backdrop-blur-sm md:p-6"
     >
       <div className="grid gap-4 md:grid-cols-2">
         <label className="text-xs uppercase tracking-[0.15em] text-soft-beige/70">
@@ -78,7 +79,7 @@ export function ReservationForm() {
             required
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="mt-2 w-full rounded-xl border border-soft-beige/25 bg-charcoal/70 px-3 py-2 text-sm outline-none ring-accent-gold transition focus:ring"
+            className={inputClass}
           />
         </label>
 
@@ -89,7 +90,7 @@ export function ReservationForm() {
             type="email"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="mt-2 w-full rounded-xl border border-soft-beige/25 bg-charcoal/70 px-3 py-2 text-sm outline-none ring-accent-gold transition focus:ring"
+            className={inputClass}
           />
         </label>
 
@@ -100,7 +101,7 @@ export function ReservationForm() {
             type="tel"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            className="mt-2 w-full rounded-xl border border-soft-beige/25 bg-charcoal/70 px-3 py-2 text-sm outline-none ring-accent-gold transition focus:ring"
+            className={inputClass}
           />
         </label>
 
@@ -113,7 +114,7 @@ export function ReservationForm() {
             type="number"
             value={form.guests}
             onChange={(e) => setForm({ ...form, guests: e.target.value })}
-            className="mt-2 w-full rounded-xl border border-soft-beige/25 bg-charcoal/70 px-3 py-2 text-sm outline-none ring-accent-gold transition focus:ring"
+            className={inputClass}
           />
         </label>
 
@@ -121,11 +122,10 @@ export function ReservationForm() {
           Date
           <input
             required
-            min={minDate}
             type="date"
             value={form.date}
             onChange={(e) => setForm({ ...form, date: e.target.value })}
-            className="mt-2 w-full rounded-xl border border-soft-beige/25 bg-charcoal/70 px-3 py-2 text-sm outline-none ring-accent-gold transition focus:ring"
+            className={inputClass}
           />
         </label>
 
@@ -136,7 +136,7 @@ export function ReservationForm() {
             type="time"
             value={form.time}
             onChange={(e) => setForm({ ...form, time: e.target.value })}
-            className="mt-2 w-full rounded-xl border border-soft-beige/25 bg-charcoal/70 px-3 py-2 text-sm outline-none ring-accent-gold transition focus:ring"
+            className={inputClass}
           />
         </label>
       </div>
@@ -147,7 +147,7 @@ export function ReservationForm() {
           rows={3}
           value={form.notes}
           onChange={(e) => setForm({ ...form, notes: e.target.value })}
-          className="mt-2 w-full rounded-xl border border-soft-beige/25 bg-charcoal/70 px-3 py-2 text-sm outline-none ring-accent-gold transition focus:ring"
+          className={inputClass}
         />
       </label>
 
@@ -163,7 +163,7 @@ export function ReservationForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-5 w-full rounded-full bg-accent-gold px-6 py-3 text-sm font-semibold text-charcoal transition hover:opacity-90 disabled:opacity-60"
+        className="mt-5 w-full rounded-full bg-accent-gold px-6 py-3 text-sm font-semibold text-charcoal transition duration-300 hover:-translate-y-0.5 hover:opacity-90 disabled:opacity-60"
       >
         {status === "loading" ? "Submitting..." : "Request Reservation"}
       </button>
